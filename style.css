@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.background{
+    position: fixed;
+    top:0;
+    widows: 100%;
+    height:100vh;
+    display: flex;
+    z-index: -1;
+}
+.block{
+    position: absolute;
+    width:5%;
+    z-index:1;
+}
+.topblock{
+    top:0;
+}
+.bottomblock{
+    bottom:0;
+}
+.block1{
+    display: none;
+    left:120%;
+    animation: moveblock 2s linear 1;
+}
+.block2{
+    display:none;
+    left:180%;
+    animation: moveblock 3s linear 1;
+}
+.block3{
+    display: none;
+    left:240%;
+    animation: moveblock 4s linear 1;
+}
+.background-pic{
+    animation: move 1s linear infinite;
+    width:100%;
+    height: 100vh;
+    left:0;
+    top:0;
+    z-index: -1;
+}
+.coverup{
+    transform: translateX(0%);
+}
+.bird{
+    position: absolute;
+    top:45%;
+    left:45%;
+    width:5%;
+    height: 8%;
+    animation: drop 0.75s 1;
+    z-index:1;
+}
+.score{
+    z-index:1;
+    margin:5%;
+    font-size: larger;
+}
+.playagain{
+    display: none;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+    padding:15px;
+    background-color: aqua;
+    border-radius:5px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+@keyframes drop{
+    to{
+        top:92%;
+        transform: rotate(90deg);
+    }
+}
+@keyframes fly{
+    to{
+       transform:translateY(-150px);
+    }
+}
+@keyframes move{
+    to{
+        transform:translateX(-100%);
+    }
+}
+@keyframes moveblock{
+    to{
+        left:-1%;
+    }
+}
