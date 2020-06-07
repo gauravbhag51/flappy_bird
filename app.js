@@ -57,6 +57,12 @@ window.addEventListener("keypress",function(e){
         bird.style.animation="fly 0.25s 1";
     }
 });
+window.addEventListener("click",function(){
+        pos=bird.getBoundingClientRect().y;
+        bird.style.top=`${pos}px`;
+        bird.style.animation="";
+        bird.style.animation="fly 0.25s 1";
+});
 let score=0;
 let strscore="";
 setInterval(()=>{
